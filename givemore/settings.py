@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'api',
     'donationapp',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'rest_auth',
 ]
 
 MIDDLEWARE = [

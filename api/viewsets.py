@@ -82,14 +82,14 @@ class RequestMatchViewSet(viewsets.ModelViewSet):
     queryset = RequestMatch.objects.all()
     serializer_class = RequestMatchSerializer
 
-@api_view(["POST"])
-def login(request):
-    username = request.data.get("username")
-    password = request.data.get("password")
+# @api_view(["POST"])
+# def login(request):
+#     username = request.data.get("username")
+#     password = request.data.get("password")
 
-    user = authenticate(username=username, password=password)
-    if not user:
-        return Response({"error": "Login failed"}, status=HTTP_401_UNAUTHORIZED)
+#     user = authenticate(username=username, password=password)
+#     if not user:
+#         return Response({"error": "Login failed"}, status=HTTP_401_UNAUTHORIZED)
 
-    token, _ = Token.objects.get_or_create(user=user)
-    return Response({"token": token.key})
+#     token, _ = Token.objects.get_or_create(user=user)
+#     return Response({"token": token.key})

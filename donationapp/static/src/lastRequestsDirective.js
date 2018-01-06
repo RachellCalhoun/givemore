@@ -4,7 +4,7 @@ angular.module("refugeeapp")
         restrict:"E",
         templateUrl:"/static/templates/lastRequests.html",
         link: function($scope, attributes){
-            apiSvc.get("request").then(function(response){
+            apiSvc.get("requests").then(function(response){
                 $scope.requests = response.data;
                 console.log(response.data)
             });

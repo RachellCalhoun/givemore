@@ -17,7 +17,7 @@ angular.module("refugeeapp")
             })
         }
         function getSchema(resourceName){
-            return $http.get("/api/"+resourceName+"/schema/?format=json").then(function(response){
+            return $http.get("/api/"+resourceName+"/?format=json").then(function(response){
                 var fields = {}
                 var schema  = response.data;
                 for(var k in schema.fields){
