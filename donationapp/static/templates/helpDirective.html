@@ -1,0 +1,11 @@
+<div >
+    <p ng-repeat="r in requestmatches">
+        <span ng-bind="r.interested.username"></span>
+        <span>{{ r.interested.first_name }} {{ r.interested.last_name }} --  </span>
+        <span>
+            <button ng-if="r.approve_contact == false" ng-click="approve(r)">Approve </button>
+            <button ng-if="r.approve_contact == true" ng-click="disapprove(r)">Remove Approval </button>
+        </span>
+    </p>
+ </div>
+    

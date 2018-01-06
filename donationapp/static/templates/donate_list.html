@@ -1,0 +1,19 @@
+
+    <div class="container containerBig">
+       <h1 class="text-center">Items recently donated</h1>   
+
+       <div class="col-xs-3 well" style="margin:1em;" ng-repeat="d in donations">
+        <a href="#/donate/{{ d.id }}">
+            <h2>{{ d.item }}</h2>
+            <img ng-src="{{ d.image }}" style="width:100%;max-height:200px;"/></a>
+            <span ng-bind="d.published_date|date"></span>
+            <span ng-bind="d.condition"></span>
+            <p ng-bind="d.details"></p>
+            <p>{{ d.category.title }} - {{ d.subcategory.title }}</p>
+            <p>
+                <button ng-if="user.u === d.author.username" type="button" class="btn btn-outline darkbtn" ng-click="remove(d)">Delete</button>
+                <button ng-if="user.u !== d.author.username" type="button" class="btn btn-outline darkbtn" ng-click="interested(d)">I'm interested</button>
+            </p>
+        
+        </div>
+    </div>

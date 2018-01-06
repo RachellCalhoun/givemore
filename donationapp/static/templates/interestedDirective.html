@@ -1,0 +1,10 @@
+<div>
+    <p ng-repeat="d in donatematches">
+    <span ng-bind="d.interested.username"></span>
+    <span>{{ d.interested.first_name }} {{ d.interested.last_name }} --  </span>
+    
+        <button ng-if="d.approve_contact == false" ng-click="approve(d)">Approve </button>
+        <button ng-if="d.approve_contact == true" ng-click="disapprove(d)">Remove Approval </button>
+    </p>
+
+    </div>
