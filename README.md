@@ -1,4 +1,5 @@
-# refugee-donation-app
+# Givemore
+(This is a duplicate of https://github.com/RachellCalhoun/refugee-donation-app, but instead of tastiepie, using DRF. It is still WIP)
 An app using Django and Angular made with refugees, or partner organizations, in mind, for requesting or donating goods. 
 There are two apps: accounts for users profiles and donate app that will handle donations and donation requests
 
